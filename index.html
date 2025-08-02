@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Cab Service</title>
+  <link rel="stylesheet" href="CssFile.css" />
+</head>
+<body>
+  <header>
+    <h1>Cab Service </h1>
+  </header>
+  <div class="container">
+    <section class="cab-list">
+      <h2>Available Cabs</h2>
+      <div class="cab-item">
+        <span>Cab A - Sedan</span>
+        <button onclick="bookCab('Cab 1 - Sedan', 500)">Book Now</button>
+      </div>
+      <div class="cab-item">
+        <span>Cab B - SUV</span>
+        <button onclick="bookCab('Cab 2 - SUV', 1000)">Book Now</button>
+      </div>
+      <div class="cab-item">
+        <span>Cab C - Mini</span>
+        <button onclick="bookCab('Cab 3 - Mini', 200)">Book Now</button>
+      </div>
+    </section>
+    <section class="wallet">
+      <h2>Your Wallet</h2>
+      <p>Balance: ₹<span id="walletBalance">2000</span></p>
+      <input type="number" id="rechargeAmount" placeholder="Enter amount to recharge" />
+      <button onclick="rechargeWallet()">Recharge Wallet</button>
+    </section>
+    <section class="payment">
+      <h2>Payment Options</h2>
+      <div id="bookingInfo" class="hidden">
+        <p><strong>Booking:</strong> <span id="bookingCab"></span></p>
+        <p><strong>Fare:</strong> ₹<span id="bookingFare"></span></p>
+        <p><strong>From:</strong> <span id="fromLocation"></span></p>
+        <p><strong>To:</strong> <span id="toLocation"></span></p>
+      </div>
+      <h3>Enter Your Route</h3>
+      <input type="text" id="fromInput" placeholder="From" />
+      <input type="text" id="toInput" placeholder="To" />
+      <h3>Pay via UPI</h3>
+      <input type="text" id="upiId" placeholder="Enter your UPI ID" />
+      <button onclick="payViaUPI()">Pay with UPI</button>
+      <h3>Or Scan QR Code</h3>
+      <img src="images/qr.png" alt="QR Code" class="qr-code" />
+    </section>
+  </div>
+  <script src="JavaScriptFile.js"></script>
+</body>
+</html>
